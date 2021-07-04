@@ -1,35 +1,32 @@
 # W3F Open Grant Proposal
 
 * **Project Name:** Ciphertext search
-* **Team Name:** Dutunk Network (Bo Yuan, Bin Guo)
+* **Team Name:** Datank Network (Bo Yuan, Bin Guo)
 * **Payment Address:** 0xb82EdE43D03fD23dcdb2d066720b3E77F3bedf6d
 
 ## Project Overview
 
 We have been working on Ciphertext search projects and scalability solutions and now we would like to implement Ciphertext search pallet.
 
-The plonk is called `universal zkSNARK` because of two reasons. The verification times are constant and original reference string can be used to build proofs with any type of circuit. These features bring significant benefits to both users and developers. For example, the verification time is the same so users don't have to wait so long even when they prove complicated proof, and original reference string can reuse so developers don't have to do trusted setup for each circuit. The plonk will be a core technology in terms of scaling and privacy so we should support.
+This system is a ciphertext retrieval system based on blockchain. In the real society, there are a lot of historical data all over every corner. The owner of this data wants to sell the data without revealing the type of data, and users who have demand for this data also want to buy the data without revealing their search intent. This system is a platform that matches the needs of the two. The pallet will be a core technology in terms of scaling and privacy so we should support.
 
 ### Overview
 
-Through this grant, we are going to make a plonk pallet in order for the developer to implement plonk on substrate easily. We are working on scalability solutions but currently, the substrate doesn't support zkSNARK pallet so we think it's a issue to fix. As aforementioned, zkSNARK will be a core technology in blockchain area and especially plonk is cutting edge technology so we are excited to implement this as pallet.
+Through this grant, we are going to make a private pallet in order for the developer to implement ciphertext retrieval on substrate easily. We are working on scalability solutions but currently, the substrate doesn't support ciphertext retrieval pallet so we think it's a issue to fix. As aforementioned, ciphertext retrieval will be a core technology in blockchain area and especially ciphertext retrieval is cutting edge technology so we are excited to implement this as pallet.
 
 ### Project Details
 
-We'd like to implement the Ciphertext search library as a pallet in order for developers to customize circuits and use the plonk protocol.
+We'd like to implement the Ciphertext search library as a pallet in order for developers to customize circuits.
 
 The following diagram is the libraries we are going to implement.
 
-* Polynomial commitment
-* Circuit builder
-* Generate proof and verify keys
-* Verify proof
+* Ciphertext search algorithm
+* Key generation and key hashing
+* Generate token algorithm
+* Matching algorithm
+* Preprocessing algorithm
 
 ### Ecosystem Fit
-
-According to Web3 Foundation, there are at least 2 different teams that work on ZK technologies.
-- [Zeropool](https://github.com/zeropoolnetwork)
-- [Glacier](https://github.com/gbctech)
 
 Glacier is building a Distaff VM for zk-STARK proof generation and verification that are used to make  private smart contracts and private credential verifications. The difference between us is that we are making a zkSNARK pallet and they are making a VM which supports STARKs. In terms of Zeropool, they are making private transactions contract pallet using bellman groth16 protocal and we are making zkSNARK libray using plonk.
 
@@ -47,7 +44,7 @@ We believe zkSNARK with plonk will be core technology of next blockchain area. T
 
 * **Contact Name:** Bo Yuan
 * **Contact Email:** XX@buaa.edu.cn
-* **Website:** [Artree](http://www.hongchain.cn/)
+* **Website:** [http://www.hongchain.cn](http://www.hongchain.cn/)
 
 ### Legal Structure
 
@@ -75,7 +72,7 @@ We plan to provide a `Ciphertext search` pallet that allows Substrate-based bloc
 
 * **Total Estimated Duration:** 3 months
 * **Full-Time Equivalent (FTE):**  1 FTE
-* **Total Costs:** 30000 DAI
+* **Total Costs:** 20000 DAI
 
 ### Milestone 1 Example — Implement Substrate Modules
 
@@ -89,5 +86,5 @@ We plan to provide a `Ciphertext search` pallet that allows Substrate-based bloc
 | 0b. | Documentation | We will provide both inline documentation of the code and a basic tutorial that explains how a developer builds a circuit and a user prove their computation through the circuit. |
 | 0c. | Testing Guide | Core functions will be fully covered by unit tests and audit to ensure functionality and robustness. In the guide, we will describe how to run these tests. |
 | 0d. | Article/Tutorial | We will publish an article/tutorial/workshop that explains
-| 1. | make plonk compatible | The dusk-network plonk is compatible with `no-std` so we are going to modify attributes according to [parity-codec](https://github.com/paritytech/parity-scale-codec) and `Rng` to be compatible with　Substrate environment. This step allows this pallet to work on resource-constrained execution environments like Substrate runtime, attributes should be modified in accordance with SCALE codec and some versions of Rng can’t be compiled to wasm so we need to research and make it stable as necessary. |
-| 2. | implement zkSNARK plonk pallet | We will create a set of plonk-based zkSNARK libraries that allow a developer to build their own circuit and a user to prove their computation validity. Verifying proofs are done by on-chain. Creating the proofs are done by off-chain. |  
+| 1. | make ciphertext retrieval compatible | The datank-network ciphertext retrieval is compatible with `no-std` so we are going to modify attributes according to [parity-codec](https://github.com/paritytech/parity-scale-codec) and `Rng` to be compatible with　Substrate environment. This step allows this pallet to work on resource-constrained execution environments like Substrate runtime, attributes should be modified in accordance with SCALE codec and some versions of Rng can’t be compiled to wasm so we need to research and make it stable as necessary. |
+| 2. | implement ciphertext retrieval pallet | We will create a set of private-based ciphertext retrieval libraries that allow a developer to build their own circuit and a user to prove their computation validity. Verifying proofs are done by on-chain. Creating the proofs are done by off-chain. |  
