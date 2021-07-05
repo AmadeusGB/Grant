@@ -78,7 +78,7 @@ We plan to provide a `Ciphertext search` pallet that allows Substrate-based bloc
 
 * **Estimated Duration:** 3 months
 * **FTE:**  1
-* **Costs:** 30000 DAI
+* **Costs:** 20000 DAI
 
 | Number | Deliverable | Specification |
 | -----: | ----------- | ------------- |
